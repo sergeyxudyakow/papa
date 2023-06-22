@@ -1,0 +1,94 @@
+<html>
+	<head>
+		<title>Random Picture Generator</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class = "aaa">
+            <header class="flex">
+                <h1>Random Picture Generator</h1>
+                <button>Generate Random Picture</button>
+            </header>
+            <section class="flex">
+                <img src="">
+            </section>
+        </div>
+        <style>
+            html, body {
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+
+header {
+	width: 100%;
+	padding-bottom: 25px;
+	flex-direction: column;
+}
+img {
+    width: 540px;
+    height: 540px;
+}
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+h1 {
+  color: #fff;
+  font-family: 'Montserrat',sans-serif;
+}
+button {
+  color: #fff;
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  background: transparent;
+  border: 1px solid #fff;
+}
+body {
+  background: #000211;
+}
+* {
+    overflow: hidden;
+}
+        </style>
+        <script>
+            const imageArray = [
+	"https://i.ibb.co/VwY9KPt/2.png",
+	"https://i.ibb.co/MRxXJdm/1.png",
+	"https://i.ibb.co/8M11Ds9/1.png",
+	"https://i.ibb.co/6DSN2QP/1.png",
+	"https://i.ibb.co/6ttbXkB/1.png",
+	"https://i.ibb.co/JrfCPfD/7.png",
+    "https://i.ibb.co/SfbQWxG/1.png",
+    "https://i.ibb.co/VwY9KPt/2.png",
+	"https://i.ibb.co/MRxXJdm/1.png",
+	"https://i.ibb.co/8M11Ds9/1.png",
+	"https://i.ibb.co/6DSN2QP/1.png",
+	"https://i.ibb.co/6ttbXkB/1.png",
+	"https://i.ibb.co/JrfCPfD/7.png",
+    "https://i.ibb.co/SfbQWxG/1.png",
+    "https://i.ibb.co/VwY9KPt/2.png",
+	"https://i.ibb.co/MRxXJdm/1.png",
+	"https://i.ibb.co/8M11Ds9/1.png",
+	"https://i.ibb.co/6DSN2QP/1.png",
+	"https://i.ibb.co/6ttbXkB/1.png",
+	"https://i.ibb.co/JrfCPfD/7.png",
+    "https://i.ibb.co/SfbQWxG/1.png"
+];
+
+const image = document.querySelector("img");
+const button = document.querySelector("button");
+
+window.onload = () => generateRandomPicture(imageArray);
+
+button.addEventListener("click", () => generateRandomPicture(imageArray));
+
+function generateRandomPicture(array){
+	let randomNum = Math.floor(Math.random() * array.length); 
+	image.setAttribute("src", array[randomNum]);
+}
+        </script>
+	</body>
+</html>

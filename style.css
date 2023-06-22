@@ -1,0 +1,309 @@
+@font-face {
+    font-family: "Qatar2022";
+    src: local("Qatar2022"),
+         url("/fonts/Qatar2022-Medium.otf") format("otf");
+}
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Bebas+Neue&family=Cormorant:wght@300;400;500;600;700&family=Fjalla+One&family=Gloria+Hallelujah&family=Gochi+Hand&family=Indie+Flower&family=Jost:wght@600&family=Marcellus&family=Montserrat:wght@400;600;700;900&family=Nanum+Brush+Script&family=Nothing+You+Could+Do&family=Noto+Serif:wght@700&family=Open+Sans:wght@300;400;500;600&family=Permanent+Marker&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Reenie+Beanie&family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Rock+Salt&family=Sedgwick+Ave&family=Shantell+Sans:ital@1&family=Short+Stack&family=Urbanist:wght@600&family=Wix+Madefor+Display:wght@700&display=swap');
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial;
+    margin: 0;
+}
+.header {
+    padding: 40px;
+    text-align: center;
+    /*background: #1abc9c;
+    color: white;*/
+    height: 330px;
+}
+.header, .navbar {
+    background: #F8F9FA;
+    box-shadow: 0 4px 2px -2px rgba(113, 113, 113, 0.1);
+
+}
+.header img {
+    width: 180px;
+    height: 180px;
+    border: none;
+}
+.header p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 205%;
+    letter-spacing: -0.01px;
+    color: #5F7FFF;
+    margin-top: -25px;
+}
+.header h1 {
+    font-family: 'Qatar2022';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 104%;
+    letter-spacing: -0.03em;
+    color: #222;
+    margin-top: 10px;
+}
+.navbar {
+    display: flex;
+    /*background-color: #333;*/
+    justify-content: center;
+    border: 1px solid #E5E8EB;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+.navbar a {
+    padding: 10px 0;
+    text-decoration: none;
+    text-align: center;
+    color: #5F7FFF;
+    font-size: 20px;
+    line-height: 139%;
+    letter-spacing: -0.03em;
+    font-family: 'Qatar2022', sans-serif;
+    font-weight: 300;
+    position: relative;
+    margin-left: 20px;
+}
+.navbar a + a {
+    color: #717171;
+}
+/*.navbar a ~ a {
+    color: red;
+}*/
+.active::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #5F7FFF;
+    width: 100%;
+    height: 2px;
+}
+/*.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}*/
+.row {  
+    display: flex;
+    flex-wrap: wrap;
+}
+.side {
+    flex: 45%;
+    background: transparent;
+    padding: 20px;
+    /*margin-left: 20%;*/
+}
+.main {
+    flex: 25%;
+    /*background-color: #f1f1f1;*/
+    background: transparent;
+    padding: 20px;
+    /*margin-right: 15%;*/
+    margin-left: -10%;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+.fakeimg {
+    background-color: none;
+    width: 80%;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #E5E8EB;
+    position: relative;
+}
+.fakeimg1 {
+    margin: 25px 0 0 0;
+    background-color: none;
+    width: 40%;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #E5E8EB;
+    display: inline-block;
+    height: 400px;
+    position: relative;
+}
+.fakeimg2 {
+    margin: 0 0 0 0;
+    background-color: none;
+    width: 85%;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #E5E8EB;
+    display: inline-block;
+    height: 580px;
+    position: relative;
+}
+.fakeimg1 img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*height: 70%;*/
+    height: 18rem;
+   /* height: 30vh;*/
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.fakeimg1 .text {
+    width: 100%;
+    height: 35%;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.fakeimg1 .text h1 {
+    color: #474C52;
+    font-size: 15px;
+    line-height: 104%;
+    letter-spacing: -0.1px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    margin: 4% 0 0 3%;
+}
+.fakeimg1 .text h2 {
+    color: #222;
+    font-size: 1rem;
+    line-height: 139%;
+    letter-spacing: -0.1px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin: 2% 0 0 3%;
+}
+.fakeimg1 .text h3 {
+    color: #717171;
+    font-size: 15px;
+    line-height: 139%;
+    letter-spacing: -0.1px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    margin: 2% 0 0 3%;
+}
+.fakeimg2 .text h1 {
+    color: #000;
+    margin-top: -5px;
+    font-size: 25px;
+    line-height: 139%;
+    letter-spacing: -0.1px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+.fakeimg2 .text h2 {
+    color: #222;
+    font-size: 20px;
+    line-height: 104%;
+    letter-spacing: -0.1px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+.fakeimg2 .text h3 {
+    color: #717171;
+    font-size: 15px;
+    line-height: 104%;
+    letter-spacing: -0.1px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: -25px;
+}
+.fakeimg2 p {
+    margin-left: 5px;
+    display: inline-block;
+}
+.line {
+    width: 100%;
+    height: 1px;
+    background: #E5E8EB;
+    position: absolute;
+    left: 0;
+    margin-top: -20px;
+}
+.fakeimg h1 {
+    color: #222;
+    margin-top: -5px;
+    font-size: 25px;
+    line-height: 145%;
+    letter-spacing: -0.1px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+.fakeimg h2 {
+    color: #222;
+    font-size: 20px;
+    line-height: 145%;
+    letter-spacing: -0.1px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+}
+.fakeimg h3 {
+    color: #222;
+    font-size: 20px;
+    line-height: 145%;
+    letter-spacing: -0.1px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    margin-top: 35px;
+}
+.text + .text {
+    margin-top: -20px;
+}
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+.fakeimg i {
+    font-size: 40px;
+    margin-top: 5px;
+    color: rgb(34, 34, 34, 0.5);
+    z-index: 999;
+}
+.fakeimg span {
+    background: #fc0;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    display: none;
+}
+.fakeimg h2 p {
+    display: inline-block;
+    color: #5F7FFF
+}
+/*.fakeimg i:hover ~ span {
+    display: inline-block;
+}*/
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row, .navbar {   
+      flex-direction: column;
+    }
+    .main {
+        margin-left: 0;
+    }
+    .row {
+        margin-left: 10%;
+    }
+    .main {
+        flex: 75%;
+    }
+  }
+  @media screen and (min-width: 1400px) {
+    .main {
+        margin-right: 15%;
+        margin-left: -10%;
+    }
+    .side {
+        margin-left: 20%;
+    }
+  }
